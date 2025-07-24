@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-b from-orange-200 to-blue-100
+}
+
+/* FLEX */
+.flex-around {
+  @apply flex justify-around items-start flex-wrap
+}
+
+.flex-between {
+  @apply flex justify-between items-center flex-wrap
+}
+
+.flex-center {
+  @apply flex justify-center items-center flex-wrap
+}
+
+.flex-end {
+  @apply flex justify-end items-end flex-wrap
+}
+
+.flex-start {
+  @apply flex justify-start items-start flex-wrap
+}
+
+/* INPUT & TEXTAREA*/
+input {
+  @apply py-2 z-10 px-4 border border-yellow-300 focus:outline-none ring-yellow-400 focus:ring-2 focus:to-yellow-500 rounded;
+}
+
+textarea {
+  @apply py-2 z-10 px-4 border border-yellow-300 focus:outline-none ring-yellow-400 focus:ring-2 focus:to-yellow-500 rounded;
+}
+
+.box::before {
+  @apply content-[''] absolute w-1/2 h-full border-l-8 border-t-8 bottom-0 left-0 border-orange-600
+}
+
+.box::after {
+  @apply content-[''] absolute w-[43%] h-full border-b-8 border-r-8 right-0 top-0 border-orange-600
+}
