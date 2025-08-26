@@ -65,3 +65,7 @@ body {
   animation: scaleLoop 30s ease-in-out infinite;
   transform-origin: center;
 }
+
+.cs_carsousel img , .cs_carsousel.carousel .slide img{
+  width: auto !important;
+} 

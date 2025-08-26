@@ -121,9 +121,9 @@ const Contact = () => {
                                 </form>
                             </div>
                         </div>
-                        <div className='w-full md:w-1/2 flex-1 p-6'>
+                        <div className='w-full md:w-1/2 flex-1 sm:p-6'>
                             <div className='text-center sm:text-left font-[300]'>
-                                <div className="flex-1 py-6 px-0 sm:px-8">
+                                <div className="flex-1 py-6 px-0 lg:px-8">
                                     <div className="py-4 space-y-4">
                                         <h2 className="text-xl sm:text-4xl text-gray-900 font-semibold uppercase">Reach out to us at:</h2>
                                         <p className='leading-tight tracking-widest'>We’re delighted to hear from you and are ready to answer any questions you may have about our event management services.</p>
@@ -132,13 +132,13 @@ const Contact = () => {
                                         <Link to="mailto:rr.globalevents09@gmail.com">
                                             <div className="inline-flex justify-start items-center pointer-events-none text-slate-600">
                                                 <MdIcons.MdEmail fontSize={22} className="mr-2 text-customPurple-900" />
-                                                <p className="sm:text-xl">rr.globalevents09@gmail.com</p>
+                                                <p className="text-sm sm:text-xl">rr.globalevents09@gmail.com</p>
                                             </div>
                                         </Link>
                                         <Link to="mailto:sales.rrglobalevents@gmail.com">
                                             <div className="inline-flex justify-start items-center pointer-events-none text-slate-600">
                                                 <MdIcons.MdEmail fontSize={22} className="mr-2 text-customPurple-900" />
-                                                <p className="sm:text-xl">sales.rrglobalevents@gmail.com</p>
+                                                <p className="text-sm sm:text-xl">sales.rrglobalevents@gmail.com</p>
                                             </div>
                                         </Link>
                                         <div>

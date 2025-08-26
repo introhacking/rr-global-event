@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme{
+  --breakpoint-xs:480px
+}
+
+
 body {
   @apply bg-gradient-to-b from-orange-200 to-blue-100
 }

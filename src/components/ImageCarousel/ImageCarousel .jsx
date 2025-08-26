@@ -21,7 +21,7 @@ const slides = [
 
 const ImageCarousel = () => {
     return (
-        <div className="h-[300px] sm:h-[400px] lg:h-[100vh] overflow-hidden">
+        <div className="h-[63vh] sm:h-[95vh] lg:h-[100vh] overflow-hidden">
             <Carousel
                 autoPlay
                 infiniteLoop

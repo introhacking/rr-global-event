@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import Button from "../components/module/Button";
 
 const ErrorPage = ({ errMsg }) => {
-    return <div className="flex h-[80vh] justify-center items-center flex-col space-y-3 p-8">
+    return <div className="flex h-[80vh] justify-center items-center flex-col space-y-3 sm:p-8">
         <h1 className="text-4xl font-extrabold">404</h1>
-        <p className="text-6xl font-extrabold">
+        <p className="text-center text-xl xs:text-4xl sm:text-6xl font-extrabold">
             {errMsg}
         </p>
         <Link to='/'>
