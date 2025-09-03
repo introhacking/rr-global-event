@@ -4,10 +4,13 @@ import { useEffect, useState } from "react";
 import Button from "../module/Button";
 import logo from '../../assets/images/rr_logo.png'
 import * as FiIcons from 'react-icons/fi'
+import * as IoIcons from 'react-icons/io5'
+import MobileDrawer from "../module/MobileDrawer";
 
 const Header = () => {
 
     const [isSticky, setIsSticky] = useState(false);
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -38,27 +41,11 @@ const Header = () => {
     const menuList = [
         { title: "Home", path: "/#" },
         { title: "About Us", path: "/#about", sectionId: "about" },
-        { title: "Gallery", path: "/gallery" },
+        { title: "Gallery", path: "/#gallery", sectionId: "gallery" },
         { title: "Testimonials", path: "/#testimonials", sectionId: "testimonials" },
-        { title: "Clients", path: "/#clients", sectionId: "clients" },
+        // { title: "Clients", path: "/#clients", sectionId: "clients" },
         { title: "Contact", path: "/#contact", sectionId: "contact" },
     ];
-
-
-    // const handleMenuClick = (menu) => {
-    //     if (menu.redirect === "#contact") {
-    //         if (location.pathname !== "/") {
-    //             // Navigate to home and pass a flag to scroll
-    //             navigate("/", { state: { scrollToContact: true } });
-    //         } else {
-    //             // Already on home, scroll directly
-    //             document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    //         }
-    //     } else {
-    //         navigate(menu.redirect);
-    //     }
-    // };
-
 
     const handleMenuClick = ({ path, sectionId }) => {
         const goToSection = () => {
@@ -94,7 +81,7 @@ const Header = () => {
             <header className="relative z-50">
                 {/* Sticky Header */}
                 <div
-                    className={`w-full z-50 transition-all duration-500 ease-in-out ${isSticky ? "fixed top-0 bg-white/40 backdrop-blur-md shadow-md z-50 opacity-100" : "mt-4 absolute top-0"}`}
+                    className={`px-4 w-full z-50 transition-all duration-500 ease-in-out ${isSticky ? "fixed top-0 bg-white/40 backdrop-blur-md shadow-md z-50 opacity-100" : "mt-4 absolute top-0"}`}
                 >
                     <div className="hidden max-w-7xl mx-auto px-6 py-2 md:flex justify-between items-center">
                         {/* <h1 className="text-xl font-bold">Eventales</h1> */}
@@ -103,21 +90,18 @@ const Header = () => {
                                 <img src={logo} className="w-full h-full" />
                             </Link>
                         </div>
-                        <nav className="space-x-6 font-medium text-pink-800">
+                        <nav className={`space-x-6 font-medium ${isSticky ? 'text-orange-400' : 'text-white'}`}>
 
                             {menuList.map((menu) => (
 
                                 <span
                                     key={menu.title}
                                     onClick={() => handleMenuClick(menu)}
-                                    className="lg:text-xl font-semibold cursor-pointer hover:text-yellow-400"
+                                    className="lg:text-xl font-semibold cursor-pointer hover:text-orange-500"
                                 >
                                     {menu.title}
                                 </span>
                             ))}
-
-                            {/* {menuList.map(menu => <Link key={menu.title} to={menu.redirect} className="hover:text-yellow-400">{menu.title}</Link>
-                            )} */}
                         </nav>
                     </div>
                     {/* Mobile view */}
@@ -127,38 +111,22 @@ const Header = () => {
                                 <img src={logo} className="w-full h-full" />
                             </Link>
                         </div>
-                        <FiIcons.FiMenu className="text-xl" />
+                        {
+                            mobileDrawerOpen ?
+                                <IoIcons.IoCloseSharp onClick={() => setMobileDrawerOpen(prev => !prev)} className={`text-4xl cursor-pointer ${mobileDrawerOpen && 'bg-white'} p-1`} />
+                                : <FiIcons.FiMenu onClick={() => setMobileDrawerOpen(prev => !prev)} className={`text-4xl cursor-pointer ${mobileDrawerOpen && 'bg-white'} p-1`} />
+                        }
                     </div>
-
-                    {/* <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-                        <div className="w-[140px] h-[80px] invert-100">
-                            <Link to='/'>
-                                <img src={logo} className="w-full h-full" />
-                            </Link>
-                        </div>
-                        <nav className="space-x-6 font-medium text-pink-800">
-
-                            {menuList.map((menu) => (
-                                <span
-                                    key={menu.title}
-                                    onClick={() => handleMenuClick(menu)}
-                                    className="text-xl font-semibold cursor-pointer hover:text-yellow-400"
-                                >
-                                    {menu.title}
-                                </span>
-                            ))}
-                        </nav>
-                    </div> */}
                 </div>
 
                 {/* Carousel */}
                 {location.pathname === '/' &&
                     <>
                         {/* Overlay Text */}
-                        <div className="mt-20 lg:mt-0 absolute inset-0 z-20 md:flex justify-center items-end pointer-events-none py-6">
-                            <div className="p-4 text-center rounded bg-black/30 backdrop-blur-md flex flex-col space-y-4 md:space-y-6 w-11/12 lg:w-2/3 mx-auto pointer-events-auto text-white"> {/* md:w-4/5*/}
+                        <div className="sm:-mb-4 mt-24 absolute inset-0 z-20 md:flex justify-center items-end pointer-events-none py-6">
+                            <div className="p-4 text-center rounded bg-black/30 backdrop-blur-md flex flex-col space-y-4 md:space-y-6 w-11/12 lg:w-[70%] mx-auto pointer-events-auto text-white"> {/* md:w-4/5*/}
                                 <p className="sm:text-2xl font-semibold text-orange-400 uppercase">
-                                    “It always seems impossible, until it’s done.”
+                                    “It always seems impossible, until it's done.”
                                 </p>
                                 <h1 className="text-xl sm:text-4xl md:text-5xl font-bold sm:leading-14 text-shadow-2xs text-shadow-amber-500">
                                     Top-Rated Luxury Event Management Company in Delhi NCR
@@ -186,6 +154,7 @@ const Header = () => {
                 }
 
             </header >
+            {mobileDrawerOpen && <MobileDrawer menuList={menuList} handleMenuClick={handleMenuClick} closeDrawer={() => setMobileDrawerOpen(false)} />}
         </>
 
 

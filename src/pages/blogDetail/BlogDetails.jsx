@@ -17,9 +17,10 @@ const BlogDetails = () => {
     }, []);
     return (
         <div className="w-[95%] max-w-full mx-auto p-6 bg-white shadow rounded">
-            <img src={blog.image} alt={blog.title} className="w-full h-96 object-fill rounded" />
+            {/* <img src={blog.image} alt={blog.title} className="w-full h-96 object-fill rounded" /> */}
+            <img src={new URL(`../../assets/images/${blog.image}`, import.meta.url).href} alt={blog.title} className="w-full h-96 object-fill rounded" />
             <h1 className="text-3xl font-bold mt-6">{blog.title}</h1>
-            <p className="text-sm text-gray-500 mb-4">{blog.date}</p>
+            <p className="text-sm text-gray-500 my-4">{blog.date}</p>
             <div className="text-gray-700 leading-relaxed whitespace-pre-line">{blog.content}</div>
         </div>
     );

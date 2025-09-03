@@ -1,14 +1,58 @@
 [
     {
-        "title": "Section 1",
-        "content": "This is the content for section 1."
+        "title": "What services do you provide?",
+        "content": "We handle end-to-end event planning and execution including concept creation, venue booking, décor, stage setup, audiovisuals, catering, entertainment, manpower, logistics, branding, gifting and on-site management."
     },
     {
-        "title": "Section 2",
-        "content": "This is the content for section 2."
+        "title": "What types of events do you manage?",
+        "content": "We manage corporate events, product launches, conferences, exhibitions, weddings, private parties, concerts, festivals, and social gatherings."
     },
     {
-        "title": "Section 3",
-        "content": "This is the content for section 3."
+        "title": "Can you customize events according to our requirements?",
+        "content": "Yes, every event is customized as per the client’s theme, budget, and objectives."
+    },
+    {
+        "title": "How early should we contact you before the event?",
+        "content": "Ideally, at least 1-2 weeks in advance. However, we also handle last-minute events depending on availability."
+    },
+    {
+        "title": "Do you work with specific vendors or can we bring our own?",
+        "content": "We have trusted vendors for every service, but we are open to collaborating with your preferred vendors too."
+    },
+    {
+        "title": "Do you provide manpower for events?",
+        "content": "Yes, we provide professional manpower such as hosts, hostesses, ushers, promotor, volunteer, models, technical crew, and support staff."
+    },
+    {
+        "title": "How do you handle budgets?",
+        "content": "We work within the budget provided by the client and offer cost-effective solutions without compromising on quality."
+    },
+    {
+        "title": "Can you manage outstation or international events?",
+        "content": "Yes, we organize events across India and abroad, depending on the requirement."
+    },
+    {
+        "title": "What happens if there is an emergency or last-minute change?",
+        "content": "Our team always has backup plans and resources to ensure smooth execution even in case of unexpected issues."
+    },
+    {
+        "title": "How much do you charge for event management?",
+        "content": "Charges vary depending on the type, size, and scale of the event. We provide customized quotes after understanding your requirements."
+    },
+    {
+        "title": "Do you take care of event permissions and licenses?",
+        "content": "Yes, we assist in obtaining necessary permissions for sound, venue, liquor, or government approvals (if required)."
+    },
+    {
+        "title": "Can you also arrange entertainment and celebrity appearances?",
+        "content": "Yes, we arrange artists, musicians, DJs, celebrities, motivational speakers, and performers as per client needs."
+    },
+    {
+        "title": "Do you provide décor and theme design?",
+        "content": "Yes, we specialize in creative décor, theme-based setups, floral arrangements, stage design, and branding elements."
+    },
+    {
+        "title": "How do I book your services?",
+        "content": "You can reach us via phone, email, or our website. Once we understand your requirements, we’ll share you a quick proposal & quote."
     }
 ]

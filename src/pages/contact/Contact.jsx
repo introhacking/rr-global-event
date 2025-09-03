@@ -49,9 +49,9 @@ const Contact = () => {
     }, [location]);
 
     return (
-        <div className='pt-28' id='contact'>
+        <div className='' id='contact'>
             <div className='flex-1 h-full relative' style={{
-                backgroundImage: `linear-gradient(312deg, rgba(102, 51, 102, 0.1),rgba(102, 51, 102, 0.1)),url(${contactMap}`, backgroundPosition: 'top right',
+                backgroundImage: `linear-gradient(312deg, rgba(255, 229, 180, 0.1),rgba(255, 229, 180, 0.1)),url(${contactMap}`, backgroundPosition: 'top right',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
             }}>
@@ -135,12 +135,12 @@ const Contact = () => {
                                                 <p className="text-sm sm:text-xl">rr.globalevents09@gmail.com</p>
                                             </div>
                                         </Link>
-                                        <Link to="mailto:sales.rrglobalevents@gmail.com">
+                                        {/* <Link to="mailto:sales.rrglobalevents@gmail.com">
                                             <div className="inline-flex justify-start items-center pointer-events-none text-slate-600">
                                                 <MdIcons.MdEmail fontSize={22} className="mr-2 text-customPurple-900" />
                                                 <p className="text-sm sm:text-xl">sales.rrglobalevents@gmail.com</p>
                                             </div>
-                                        </Link>
+                                        </Link> */}
                                         <div>
                                             <Link to="tel: 7042364289">
                                                 <div className="inline-flex justify-start pointer-events-none items-center my-4 text-gray-600">
@@ -148,10 +148,10 @@ const Contact = () => {
                                                     <p className="sm:text-xl">+(91)-7042364289 , </p>
                                                 </div>
                                             </Link>
-                                            <Link to="tel: 9211940993">
+                                            <Link to="tel: 9625267323">
                                                 <div className="inline-flex justify-start pointer-events-none items-center my-4 text-gray-600">
                                                     <FaIcons.FaPhoneAlt fontSize={22} className="mr-2 text-customPurple-900" />
-                                                    <p className="sm:text-xl">(+91)-9211940993</p>
+                                                    <p className="sm:text-xl">(+91)-9625267323</p>
                                                 </div>
                                             </Link>
                                         </div>

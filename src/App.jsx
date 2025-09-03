@@ -5,6 +5,7 @@ import Home from './pages/home/Home'
 import BlogDetails from './pages/blogDetail/BlogDetails'
 import BlogListPage from './pages/blogDetail/BlogListPage'
 import ErrorPage from './pages/ErrorPage'
+import TermsCondition from './pages/termsCondition/TermsCondition'
 
 
 const App = () => {
@@ -15,8 +16,9 @@ const App = () => {
           {/* CLIENT UI  */}
           <Route path='/' element={<ClientLayout />}>
             <Route path='/' element={<Home />} />
-            <Route path='blog' element={<BlogListPage />} />
-            <Route path="blog/:route" element={<BlogDetails />} />
+            {/* <Route path='blog' element={<BlogListPage />} />
+            <Route path="blog/:route" element={<BlogDetails />} /> */}
+            <Route path='/terms-and-condition' element={<TermsCondition termTitle='Terms & Conditions' />} />
             <Route path='*' element={<ErrorPage errMsg={'Page Not Found'} />} />
           </Route>
         </Routes>

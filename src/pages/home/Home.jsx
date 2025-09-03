@@ -1,3 +1,4 @@
+import React from "react";
 import BlogCard from "../../components/module/BlogCard"
 import Contact from "../contact/Contact"
 import blogData from '../../data/blogData.json'
@@ -10,10 +11,26 @@ import accordionData from '../../data/accordionItem.json'
 import TestimonialCardLayout from "../../components/pageSection/TestimonialCardLayout";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import service1 from '../../assets/images/servicesImg/Entertainment_and_Artist Management1.jpg'
+import service2 from '../../assets/images/servicesImg/Venueselectionbooking1.jpg'
+import service3 from '../../assets/images/servicesImg/Designdecor2.jpg'
+import service4 from '../../assets/images/servicesImg/Designdecor1.jpg'
+import service5 from '../../assets/images/servicesImg/Guest_Management3.jpg'
+import service6 from '../../assets/images/servicesImg/Vendor&Supplier3.jpg'
+import service7 from '../../assets/images/servicesImg/Entertainment_and_Artist Management3.jpg'
+import service8 from '../../assets/images/servicesImg/Gifting2.jpg'
+import service9 from '../../assets/images/servicesImg/Vendor&Supplier2.jpg'
+import service10 from '../../assets/images/servicesImg/Guest_Management1.jpg'
+
+// Vite's import.meta.glob automatically imports all files from folder
+const images = import.meta.glob("../../assets/images/gallery/*.{png,jpg,jpeg,gif}", { eager: true });
 
 const Home = () => {
   const navigate = useNavigate();
   const visibleBlogs = blogData.slice(0, 2);
+
+  // Convert object into array of image paths
+  const imageList = Object.values(images);
 
   const testimonials = [
     {
@@ -125,8 +142,132 @@ const Home = () => {
 
         </div>
       </PageSectionLayout>
+      {/* Our Services */}
+      <PageSectionLayout id='our_services' bgClass="bg-white" title="Our Services" subTitle="Our Unique Services to Event Planning">
+        <div className="space-y-2.5">
+          <p className="w-full sm:w-3/4 mx-auto">We feel honoured to present you with premier event management skills where you can shape your special occasions according to your style, reflecting your uniqueness. We are here to help you transform your thoughts into something remarkable. We plan to achieve this through</p>
+
+          <div className="flex gap-y-4 justify-evenly flex-wrap sm:p-2">
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service1} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Event Planning & Conceptualization</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Understanding client requirements
+                  • Creating themes & concepts
+                  • Preparing proposals & presentations
+                  • Cost estimation & allocation
+                  • Vendor negotiations
+                  • Expense tracking & reporting
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service2} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Venue Selection & Booking</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Finding suitable locations
+                  • Negotiating with venues
+                  • Managing site visits & approvals
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service3} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Design & Décor</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Stage design
+                  • Thematic décor & branding
+                  • Lighting, sound, and ambience setup
+
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service4} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Vendor & Supplier Management</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Catering
+                  • Photography & videography
+                  • Florists, fabricators, and rental services
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service5} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Entertainment & Artist Management</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Celebrity appearances
+                  • Live bands, DJs, performers
+                  • Cultural/traditional shows
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service6} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Guest Management</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Invitations & RSVP handling
+                  • Registration & check-in counters
+                  • Hosting, anchors, ushers
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service7} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Food & Beverages (Catering)</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Menu planning
+                  • Buffet or sit-down meals
+                  • Special dietary requirements
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service8} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Gifting</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Single or combo
+                  • Customized with logo and name
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service9} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">On-Site Management</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Event flow coordination
+                  • Troubleshooting & crisis handling
+                  • Ensuring smooth execution
+                </p>
+              </div>
+            </div>
+            <div className="border border-orange-200 shadow-xl relative w-full aspect-[4/3] sm:w-[31%] rounded overflow-hidden group">
+              <img className="w-full h-full object-cover group-hover:blur-sm" src={service10} alt="logo" />
+              <div className="py-2.5 px-2 absolute h-full overflow-y-auto bottom-0 left-0 w-full bg-orange-500/80 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                <p className="sm:text-3xl font-semibold ">Post-Event Services</p>
+                <p className="p-1.5 overflow-auto text-sm">
+                  • Feedback collection
+                  • Payments & settlements
+                  • Post-event reporting
+                  • Thank-you notes & follow-ups
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </PageSectionLayout >
+
       {/* Our Approach */}
-      <PageSectionLayout id='our_approach' bgClass="bg-white" title="Our Approach" subTitle="Our Unique Approach to Event Planning">
+      {/*<PageSectionLayout id='our_approach' bgClass="bg-white" title="Our Approach" subTitle="Our Unique Approach to Event Planning">
         <div className="space-y-2.5">
           <p className="w-full sm:w-3/4 mx-auto">We feel honoured to present you with premier event management skills where you can shape your special occasions according to your style, reflecting your uniqueness. We are here to help you transform your thoughts into something remarkable. We plan to achieve this through</p>
 
@@ -166,31 +307,34 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </PageSectionLayout >
-      {/* Clients */}
-      <PageSectionLayout id='clients' bgClass="bg-gray-50" title="Clients" subTitle="Our Valuable Clients">
+      </PageSectionLayout>*/}
 
-      </PageSectionLayout>
+      {/* Clients */}
+      {/* <PageSectionLayout id='clients' bgClass="bg-gray-50" title="Clients" subTitle="Our Valuable Clients">
+
+      </PageSectionLayout> */}
+
       {/* Gallery */}
       <PageSectionLayout id='gallery' bgClass="" title="Gallery" subTitle="Our work">
-        <div className="flex-between gap-3">
-          <div className="w-full xs:w-[48%] md:w-[32%] border-[1px] border-orange-100">
-            <img className="transform transition-transform duration-300 hover:scale-90 w-full h-full object-cover" src={logo} alt="logo" />
-          </div>
-          <div className="w-full xs:w-[48%] md:w-[32%] border-[1px] border-orange-100">
-            <img className="transform transition-transform duration-300 hover:scale-90 w-full h-full" src={logo} alt="" />
-          </div>
-          <div className="w-full xs:w-[48%] md:w-[32%] border-[1px] border-orange-100">
-            <img className="transform transition-transform duration-300 hover:scale-90 w-full h-full" src={logo} alt="" />
-          </div>
-          <div className="w-full xs:w-[48%] md:w-[32%] border-[1px] border-orange-100">
-            <img className="transform transition-transform duration-300 hover:scale-90 w-full h-full" src={logo} alt="" />
-          </div>
+        <div className="flex justify-evenly flex-wrap gap-2">
+          {imageList.map((img, index) => (
+            <div
+              key={index}
+              className="w-full rounded xs:w-[48%] md:w-[32%] lg:w-[24%] border border-orange-100 overflow-hidden aspect-[4/3]"
+            >
+              <img
+                className="w-full h-full scale-125 object-cover transform transition-transform duration-500 hover:scale-100"
+                src={img.default}
+                alt={`Gallery ${index}`}
+              />
+            </div>
+          ))}
         </div>
 
       </PageSectionLayout>
+
       {/* Our Blog */}
-      <PageSectionLayout id='blog' bgClass="bg-gray-100" title="blog" subTitle="Our Blog">
+      {/* <PageSectionLayout id='blog' bgClass="bg-gray-100" title="blog" subTitle="Our Blog">
         <div className="text-center">
           <div className="gap-6 flex flex-wrap justify-start my-4">
             {visibleBlogs?.map((blog, index) => (
@@ -205,7 +349,8 @@ const Home = () => {
           </div>
           <Button name={'View More'} onClick={() => { navigate('/blog') }} />
         </div>
-      </PageSectionLayout>
+      </PageSectionLayout> */}
+
       {/* Testimonials */}
       <PageSectionLayout id='testimonials' bgClass="bg-white" title="What they say" subTitle="Our Testimonials">
         <div className="max-w-6xl mx-auto">
@@ -232,6 +377,7 @@ const Home = () => {
           </Carousel>
         </div>
       </PageSectionLayout>
+
       {/* FAQs */}
       <PageSectionLayout id='faqs' bgClass="bg-gray-50" title="FAQs" subTitle="FAQs About event planners in delhi ncr">
         <div className="border border-orange-200 w-full sm:w-[85%] mx-auto">
@@ -240,6 +386,7 @@ const Home = () => {
           ))}
         </div>
       </PageSectionLayout>
+
       {/* <div className="bg-white text-center p-4 sm:p-12">
         <p className="text-orange-400 my-6">Our Blog</p>
         <div className="gap-6 flex flex-wrap justify-start my-4">
@@ -255,7 +402,11 @@ const Home = () => {
         </div>
         <Button name={'View More'} onClick={() => { navigate('/blog') }} />
       </div> */}
-      <Contact />
+      {/* Contact */}
+      <PageSectionLayout id='contact' bgClass="bg-white" title="Contact" subTitle="">
+        <Contact />
+      </PageSectionLayout>
+
     </div>
   )
 }
