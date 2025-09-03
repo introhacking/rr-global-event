@@ -1,6 +1,6 @@
 {
   "name": "events",
-  "homepage": "https://introhacking.github.io/rr_event_deployment/",
+  "homepage": "https://introhacking.github.io/rr-global-event/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
