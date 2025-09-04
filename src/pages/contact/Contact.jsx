@@ -117,7 +117,9 @@ const Contact = () => {
 
                                         </textarea>
                                     </div>
-                                    <Button name={"Let's Connect"} onClick={submitHandler} />
+                                    <div className='flex items-start'>
+                                        <Button name={"Let's Connect"} onClick={submitHandler} />
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -159,7 +161,7 @@ const Contact = () => {
                                         <div className="flex justify-start pointer-events-none items-start text-customPurple-full">
                                             <FaIcons.FaMapSigns fontSize={22} className="mr-2 text-customPurple-900" />
                                             <p className="sm:text-xl">
-                                                203, Shiv Puri Sector 9 Vijay Nagar Ghaziabad-201009
+                                                Sector 9 Vijay Nagar Ghaziabad-201009
                                             </p>
                                         </div>
                                     </div>

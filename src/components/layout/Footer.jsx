@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as FaIcons from 'react-icons/fa'
+import * as SiIcons from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import Button from '../module/Button';
 import logo from '../../assets/images/rr_logo.png'
@@ -52,6 +53,12 @@ const Footer = () => {
                   />
                 </a>
               </li> */}
+
+              <li>
+                <a href="mailto:rr.globalevents09@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <SiIcons.SiGmail className="text-4xl p-0.5 rounded bg-gradient-to-r from-blue-500 via-red-500 to-green-500" />
+                </a>
+              </li>
               <li>
                 <a href="https://www.instagram.com/rr_global_agency?igsh=ZjM3Y2lrdjl6Mmdy" target="_blank" rel="noopener noreferrer">
                   <FaIcons.FaInstagramSquare className="text-4xl p-0.5 rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500" />
@@ -60,6 +67,11 @@ const Footer = () => {
               <li>
                 <a href="https://www.linkedin.com/in/rr-global-events-88678537a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
                   <FaIcons.FaLinkedin className="text-4xl p-0.5 rounded bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500" />
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/917042364289" target="_blank" rel="noopener noreferrer">
+                  <FaIcons.FaWhatsapp className="text-4xl p-0.5 rounded bg-gradient-to-r from-green-700 via-green-600 to-green-500" />
                 </a>
               </li>
             </ul>
